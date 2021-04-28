@@ -36,8 +36,8 @@ dependencies {
 gradlePlugin {
     // Define the plugin
     val greeting by plugins.creating {
-        id = "com.tomtresansky.greeting"
-        implementationClass = "com.tomtresansky.GradleXmlUtilsPluginPlugin"
+        id = "com.tomtresansky.xml_utils.XmlUtilsPlugin"
+        implementationClass = "com.tomtresansky.xml_utils.XmlUtilsPlugin"
     }
 }
 

@@ -9,9 +9,9 @@ import kotlin.test.Test
 import kotlin.test.assertTrue
 
 /**
- * A simple functional test for the 'com.tomtresansky.greeting' plugin.
+ * A simple functional test for the 'com.tomtresansky.xml_utils.XmlUtilsPlugin' plugin.
  */
-class GradleXmlUtilsPluginPluginFunctionalTest {
+class XmlUtilsPluginFunctionalTest {
     @Test fun `can run task`() {
         // Setup the test build
         val projectDir = File("build/functionalTest")
@@ -19,7 +19,7 @@ class GradleXmlUtilsPluginPluginFunctionalTest {
         projectDir.resolve("settings.gradle").writeText("")
         projectDir.resolve("build.gradle").writeText("""
             plugins {
-                id('com.tomtresansky.greeting')
+                id('com.tomtresansky.xml_utils.XmlUtilsPlugin')
             }
         """)
 
@@ -32,6 +32,6 @@ class GradleXmlUtilsPluginPluginFunctionalTest {
         val result = runner.build();
 
         // Verify the result
-        assertTrue(result.output.contains("Hello from plugin 'com.tomtresansky.greeting'"))
+        assertTrue(result.output.contains("Hello from plugin 'com.tomtresansky.xml_utils.XmlUtilsPlugin'"))
     }
 }
